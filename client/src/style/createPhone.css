@@ -1,0 +1,17 @@
+.createPhone {
+  width: 50%;
+  margin: 20px auto;
+}
+
+.createPhone input {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.createPhone input:hover {
+  background-color: rgb(233, 233, 217);
+  border-radius: 10px;
+}
+
+.createPhone button {
+  margin-right: 10px;
+}

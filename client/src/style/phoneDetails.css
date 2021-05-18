@@ -1,0 +1,43 @@
+.phoneDetails {
+  background-color: rgb(248, 243, 237);
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  padding: 5px;
+  width: 50%;
+  margin: auto;
+  border-radius: 10%;
+}
+
+.slideDown {
+  animation-name: slideDown;
+  -webkit-animation-name: slideDown;
+
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+
+  visibility: visible !important;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-10%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-10%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
