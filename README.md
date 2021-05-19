@@ -14,7 +14,7 @@ In project directoty
  npm run client-install
  ```
  ## Configure app
-rename .env_example file and then insert:
+rename .env_example file to .env and then insert:
 MONGO_URI= Your Url to MongoDb;
 
 ## Running the project
