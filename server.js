@@ -10,7 +10,6 @@ app.use(bodyParser.json());
 const path = require("path");
 //DB config
 const db = process.env.MONGO_URI;
-
 //connect to DB
 mongoose
   .connect(db, {
@@ -21,8 +20,7 @@ mongoose
   })
   .then(() => console.log("MongoDB connected..."))
   .catch((err) => console.log(err));
-
-//local or prodcution
+//prodcution
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/dist"));
   app.get("*", (req, res) => {
@@ -32,6 +30,5 @@ if (process.env.NODE_ENV === "production") {
 
 //Use Routes
 app.use("/api/phones", phones);
-
-// app.get("/", (req, res) => res.send("Hello world"));
+//App listen
 app.listen(port, () => console.log(`app listening at ${port}`));

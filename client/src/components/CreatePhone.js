@@ -40,10 +40,7 @@ class CreatePhone extends Component {
       processor: this.state.processor,
       ram: this.state.ram,
     };
-    axios
-      .post("/api/phones", { phone })
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+    axios.post("/api/phones", { phone });
   };
 
   render() {
@@ -141,7 +138,7 @@ class CreatePhone extends Component {
           <label>
             Ram:
             <input
-              type="text"
+              type="number"
               value={this.state.ram}
               name="ram"
               onChange={(e) => this.handleChange(e)}

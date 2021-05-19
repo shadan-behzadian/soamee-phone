@@ -4,17 +4,17 @@ import "../style/deletePhone.css";
 //Delete phone from main page with delete api
 class DeletePhone extends Component {
   state = {
-    id: "",
+    phoneId: "",
   };
 
   componentDidMount() {
     this.setState({
-      id: this.props.id,
+      phoneId: this.props.id,
     });
   }
 
   handleDelete = (event) => {
-    axios.delete(`api/phones/${this.state.id}`);
+    axios.delete(`api/phones/${this.state.phoneId}`);
     this.props.getAllPhones();
   };
 
